@@ -1,0 +1,66 @@
+.app-todo {
+    --size-checkbox: 18px;
+
+    background-color: rgb(247, 247, 247);
+    border-radius: 20px;
+    padding: 30px;
+    width: 600px;
+
+    &__heading {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__input-field {
+        margin-bottom: 20px;
+    }
+
+    &__task {
+        background-color: rgb(216, 216, 216);
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 10px;
+
+        &--invisible {
+            animation: invisible .3s 1 forwards;
+        }
+
+        @keyframes invisible {
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__task-icon {
+        width: 20px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        flex: 1;
+        font-size: 20px;
+    }
+
+    &__input {
+        padding-left: 10px;
+        border-radius: 5px;
+        outline: none;
+        width: 100%;
+    }
+
+    &__checkbox {
+        cursor: pointer;
+        width: var(--size-checkbox);
+        height: var(--size-checkbox);
+    }
+}

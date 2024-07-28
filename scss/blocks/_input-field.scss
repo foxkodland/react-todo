@@ -1,0 +1,37 @@
+.input-field {
+    display: flex;
+    // border-radius: 10px;
+
+    --border-radius: 10px;
+    --size-button: 50px;
+
+    &__input {
+        padding-left: 20px;
+        font-size: 20px;
+        width: 100%;
+        border: 1px solid grey;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+        &:focus {
+            outline: none;
+            border: 2px solid rgb(96, 96, 96);
+        }
+    }
+   
+    &__button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        background-color: blue;
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        width: var(--size-button);
+        height: var(--size-button);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
